@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sayali Bhate - Resume</title>
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
@@ -35,19 +34,12 @@
             color: #cccccc;
         }
 
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
-
         .contact-info ul {
             list-style: none;
             padding: 0;
             display: flex;
-            flex-direction: column;
-            gap: 10px;
+            justify-content: center;
+            gap: 20px;
             font-size: 14px;
         }
 
@@ -68,25 +60,17 @@
 
         .container {
             display: flex;
-            flex-direction: column;
-            margin: 20px;
+            flex-wrap: wrap;
             gap: 20px;
+            margin: 20px;
         }
 
-        .left-column,
-        .right-column {
+        .left-column, .right-column {
             background-color: #1a1a1a;
             padding: 20px;
             border-radius: 10px;
-        }
-
-        .left-column {
-            margin-bottom: 20px;
-        }
-
-        .left-column,
-        .right-column {
-            width: 100%;
+            flex: 1;
+            min-width: 300px;
         }
 
         h2 {
@@ -94,28 +78,6 @@
             padding-bottom: 5px;
             margin-bottom: 20px;
             font-size: 24px;
-        }
-
-        .experience-item,
-        .education-item,
-        .project-item,
-        .skills-item,
-        .certification-item {
-            margin-bottom: 20px;
-        }
-
-        .experience-item h3,
-        .education-item h3 {
-            margin: 0;
-            font-size: 18px;
-            color: #03a9f4;
-        }
-
-        .experience-item p,
-        .education-item p,
-        .project-item p {
-            margin: 5px 0;
-            color: #cccccc;
         }
 
         ul {
@@ -136,51 +98,22 @@
             color: #cccccc;
         }
 
-        @media (min-width: 600px) {
+        @media (max-width: 600px) {
             .container {
-                flex-direction: row;
-                gap: 20px;
-            }
-
-            .left-column,
-            .right-column {
-                flex: 1;
-                min-width: 300px;
-            }
-
-            header h1 {
-                font-size: 42px;
-            }
-
-            header p {
-                font-size: 18px;
-            }
-
-            .contact-info ul {
-                flex-direction: row;
-                gap: 15px;
-                font-size: 16px;
-            }
-
-            h2 {
-                font-size: 28px;
-            }
-
-            .experience-item h3,
-            .education-item h3 {
-                font-size: 20px;
+                flex-direction: column;
             }
         }
     </style>
 </head>
 
 <body>
+
     <header>
         <h1>Sayali Bhate</h1>
-        <p>Tech enthusiast and Computer Engineering student with a passion for problem-solving, database management, and software development constantly exploring innovative solutions to optimize data systems and build scalable applications.</p>
+        <p>Tech enthusiast and Computer Engineering student passionate about problem-solving, database management, and software development.</p>
         <div class="contact-info">
             <ul>
-                <li><i class="fas fa-phone-alt"></i>8657158113</li>
+                <li><i class="fas fa-phone-alt"></i> 8657158113</li>
                 <li><i class="fas fa-envelope"></i> <a href="mailto:sayalibhate2005@gmail.com">sayalibhate2005@gmail.com</a></li>
                 <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/sayali-bhate/" target="_blank">LinkedIn</a></li>
                 <li><i class="fab fa-github"></i> <a href="https://github.com/sayalibhate/" target="_blank">GitHub</a></li>
@@ -188,47 +121,26 @@
         </div>
     </header>
 
- 
-
-
+    <div class="container">
+        <!-- Left Column -->
+        <div class="left-column">
             <section id="education">
                 <h2>Education</h2>
-               
-
                 <div class="education-item">
                     <h3>BE Computer Science and Engineering</h3>
                     <p><strong>Mumbai University</strong></p>
-                    <p><strong>St. John College of Engineering and Management,Palghar</strong></p>
+                    <p><strong>St. John College of Engineering and Management, Palghar</strong></p>
                     <p>CGPA: 8.5</p>
                 </div>
-
                 <div class="education-item">
                     <h3>SSC</h3>
-                    <p><strong>AECS-5</strong></p>
-                    <p><strong>CBSE</strong></p>
-                    <p>Percentage Score:88.2%</p>
+                    <p><strong>AECS-5</strong> (CBSE)</p>
+                    <p>Percentage Score: 88.2%</p>
                     <p>Completion Year: 2020</p>
                 </div>
             </section>
-        </div>
 
-        <div class="container">
-        <div class="right-column">
-            <section id="projects">
-                <h2>Projects</h2>
-                <div class="project-item">
-                    <h3><strong>Online Examination Management System (Web Development)</strong></h3>
-                    <p>Developed a full-stack web-based Online Examination Management System to facilitate seamless exam conduction, including student registration, question paper generation, automated evaluation, and result analysis.</p>
-                </div>
-                <div class="project-item">
-                    <h3><strong>Feedback System (Windows App in .NET)</strong></h3>
-                    <p>Designed and developed a Windows-based Feedback System using .NET framework to collect and analyze user feedback for institutions and businesses, featuring secure login, data visualization, and AI-driven sentiment analysis.</p>
-                </div>
-            </section>
-        </div>
-    </div>
-
-              <section id="certifications">
+            <section id="certifications">
                 <h2>Certified Courses</h2>
                 <ul>
                     <li>Data Analyst (Microsoft)</li>
@@ -241,23 +153,37 @@
                 </ul>
             </section>
 
-            <section id="skills">
-                <h2>Skills and Abilities</h2>
-                <ul>
-                    <li>Python Programming: Core java,Java-Script</li>
-                    <li>Data Structures and Algorithms (DSA)</li>
-                    <li>Database: MySQL,PostgreSQL(RDBMS)</li>
-                    <li>Data Science and Data analytics : numpy,pandas,Matplotlib,Excel,Powerbi</li>
-                    <li>Front end : Html,Css,React</li>
-                    <li>Leadership,Communication,Team Collaboration,Adaptability</li>
-    
-                </ul>
-            </section>
-
             <section id="languages">
                 <h2>Languages</h2>
                 <ul>
                     <li>Proficient in English, Hindi, Marathi</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Right Column -->
+        <div class="right-column">
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="project-item">
+                    <h3>Online Examination Management System (Web Development)</h3>
+                    <p>Developed a full-stack web-based Online Examination Management System to facilitate seamless exam conduction.</p>
+                </div>
+                <div class="project-item">
+                    <h3>Feedback System (Windows App in .NET)</h3>
+                    <p>Designed a Windows-based Feedback System using .NET framework for collecting and analyzing user feedback.</p>
+                </div>
+            </section>
+
+            <section id="skills">
+                <h2>Skills and Abilities</h2>
+                <ul>
+                    <li>Programming: Python, Core Java, JavaScript</li>
+                    <li>Data Structures and Algorithms (DSA)</li>
+                    <li>Databases: MySQL, PostgreSQL (RDBMS)</li>
+                    <li>Data Science & Analytics: NumPy, Pandas, Matplotlib, Excel, Power BI</li>
+                    <li>Frontend: HTML, CSS, React</li>
+                    <li>Soft Skills: Leadership, Communication, Team Collaboration, Adaptability</li>
                 </ul>
             </section>
         </div>
